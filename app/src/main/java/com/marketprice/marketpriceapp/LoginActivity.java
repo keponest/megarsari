@@ -9,16 +9,16 @@ import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
     TextView sin;
-    LinearLayout circle;
+    TextView signup;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        setContentView(R.layout.activity_login);
 
-        circle = (LinearLayout)findViewById(R.id.circle);
+        signup = (TextView) findViewById(R.id.signupforfree);
         sin = (TextView)findViewById(R.id.sin);
 
-        circle.setOnClickListener(new View.OnClickListener() {
+        signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

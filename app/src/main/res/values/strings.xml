@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">MarketPriceApp</string>
+    <string name="app_name">Market Price</string>
     <string name="title_activity_login">LoginActivity</string>
 </resources>

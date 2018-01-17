@@ -7,32 +7,37 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class SigninActivity extends AppCompatActivity {
 
     ImageView sback;
     EditText usernm,pass;
+    TextView singin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
-        sback = (ImageView)findViewById(R.id.sinb);
+        sback = (ImageView) findViewById(R.id.sinb);
+        singin = (TextView)findViewById(R.id.signin);
         usernm = (EditText)findViewById(R.id.usrusr);
         pass = (EditText)findViewById(R.id.pswrd);
-        sback.setOnClickListener(new View.OnClickListener() {
+        singin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(usernm.toString().equalsIgnoreCase("") || pass.toString().equalsIgnoreCase(""))
+                if(usernm.getText().toString().isEmpty() || pass.getText().toString().isEmpty())
                 {
                     Snackbar.make(v,"Silahkan isi terlebih dahulu",2000).show();
                 }
-                else if(usernm.toString().equalsIgnoreCase("admin") || pass.toString().equalsIgnoreCase("1234"))
+                else if(usernm.getText().toString().equalsIgnoreCase("admin") &&
+                        pass.getText().toString().equalsIgnoreCase("1234"))
                 {
                     Intent i = new Intent(getApplicationContext(), HomeAdminActivity.class);
                     startActivity(i);
                     finish();
                 }
-                else if(usernm.toString().equalsIgnoreCase("sales") || pass.toString().equalsIgnoreCase("1234"))
+                else if(usernm.getText().toString().equalsIgnoreCase("sales") &&
+                        pass.getText().toString().equalsIgnoreCase("1234"))
                 {
                     Intent i = new Intent(getApplicationContext(), HomeSalesActivity.class);
                     startActivity(i);
@@ -43,6 +48,14 @@ public class SigninActivity extends AppCompatActivity {
                     Snackbar.make(v,"Username atau Password salah",2000).show();
                 }
 
+            }
+        });
+
+        sback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(SigninActivity.this, LoginActivity.class);
+                startActivity(i);
             }
         });
     }
