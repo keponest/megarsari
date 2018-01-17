@@ -39,7 +39,7 @@ public class MenuActivity extends AppCompatActivity {
 
 
 
-        ArrayAdapter<Barang> adapterbarang = new ArrayAdapter<Barang>(this, R.layout., array);
+        //ArrayAdapter<Barang> adapterbarang = new ArrayAdapter<Barang>(this, R.layout., array);
 
         ArrayAdapter<String> mHistory = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, array);
         listDataBarang.setAdapter(mHistory);
