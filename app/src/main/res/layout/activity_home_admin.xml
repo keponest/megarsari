@@ -1,9 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.marketprice.marketpriceapp.HomeAdminActivity">
+    android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+>
+
+        <TextView
+            android:id="@+id/daftarpenjual"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="133dp"
+            android:background="@drawable/angle"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Daftar Penjual"
+            android:textColor="#fff"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/baranggudang"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/daftarpenjual"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/angle"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Daftar Barang Gudang"
+            android:textColor="#fff"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/report"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignStart="@+id/daftarpenjual"
+            android:layout_below="@+id/daftarpenjual"
+            android:layout_marginTop="63dp"
+            android:background="@drawable/angle"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Report"
+            android:textColor="#fff"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/regissales"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignBottom="@+id/report"
+            android:layout_alignStart="@+id/baranggudang"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/angle"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Registrasi Sales"
+            android:textColor="#fff"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+</FrameLayout>
