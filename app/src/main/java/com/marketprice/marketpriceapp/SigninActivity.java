@@ -27,9 +27,9 @@ public class SigninActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        makesales();
-        makeadmin();
 
+        makeadmin();
+        makesales();
         adduser();
         setContentView(R.layout.activity_signin);
 
@@ -143,6 +143,7 @@ public class SigninActivity extends AppCompatActivity {
         for (int i = 0; i < accounts.size(); i++) {
             if (accounts.get(i).getUsername().equalsIgnoreCase(username)) {
                 id = accounts.get(i).getId_acc();
+                break;
             } else {
                 id = null;
             }

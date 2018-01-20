@@ -1,9 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.marketprice.marketpriceapp.Sales.InputBarangActivity">
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+>
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="52dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/buttonuploadimg"
+                android:layout_width="315dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/angle"
+                android:textColor="#fff"
+                android:text="Upload Gambar" />
+            <EditText
+                android:id="@+id/inputnamaBarang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="35dp"
+                android:background="#0000"
+                android:hint="Nama Barang"
+                android:inputType="text"
+                android:padding="16dp"
+                android:textColor="#000"
+                android:textColorHint="#ADCCE2"
+                android:textSize="16dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="#ADCCE2" />
+
+            <EditText
+                android:id="@+id/inputdeskripsiBarang"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="35dp"
+                android:background="#0000"
+                android:hint="Deskripsi Barang"
+                android:inputType="textMultiLine"
+                android:padding="16dp"
+                android:textColor="#000"
+                android:textColorHint="#ADCCE2"
+                android:textSize="16dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="#ADCCE2" />
+
+            <EditText
+                android:id="@+id/inputhargaBarang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="35dp"
+                android:background="#0000"
+                android:hint="Harga Satuan Barang"
+                android:inputType="numberDecimal"
+                android:padding="16dp"
+                android:textColor="#000"
+                android:textColorHint="#ADCCE2"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/inputstokBarang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="35dp"
+                android:background="#0000"
+                android:hint="Stok Barang"
+                android:inputType="number"
+                android:padding="16dp"
+                android:textColor="#000"
+                android:textColorHint="#ADCCE2"
+                android:textSize="16dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="#ADCCE2" />
+
+            <Button
+                android:id="@+id/inputBarangSales"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="28dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/angle"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Input Barang"
+                android:textColor="#fff"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</FrameLayout>

@@ -36,7 +36,7 @@ public class HomeAdminActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                Intent it = new Intent(HomeAdminActivity.this, DaftarBarangGudangActivity.class);
+                Intent it = new Intent(HomeAdminActivity.this, MenuActivity.class);
                 startActivity(it);
             }
         });

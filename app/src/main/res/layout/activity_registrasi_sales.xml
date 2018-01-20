@@ -1,9 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.marketprice.marketpriceapp.Admin.RegistrasiSalesActivity">
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="52dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/inputnamaToko"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="35dp"
+                android:background="#0000"
+                android:hint="Nama Toko"
+                android:inputType="text"
+                android:padding="16dp"
+                android:textColor="#000"
+                android:textColorHint="#ADCCE2"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/inputnamaPemiliktoko"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="35dp"
+                android:background="#0000"
+                android:hint="Nama Pemilik"
+                android:inputType="text"
+                android:padding="16dp"
+                android:textColor="#000"
+                android:textColorHint="#ADCCE2"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/inputnotelpToko"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="35dp"
+                android:background="#0000"
+                android:hint="Nomor Kontak"
+                android:inputType="text"
+                android:padding="16dp"
+                android:textColor="#000"
+                android:textColorHint="#ADCCE2"
+                android:textSize="16dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="#ADCCE2" />
+
+            <TextView
+                android:id="@+id/textspintipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:text="Tipe Toko"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <Spinner
+                android:id="@+id/inputtipeToko"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="35dp"
+                android:background="#0000"
+                android:hint="Deskripsi Barang"
+                android:padding="16dp"
+                android:textColor="#ADCCE2"
+                android:textColorHint="#000"
+                android:textSize="16dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="#ADCCE2" />
+
+            <EditText
+                android:id="@+id/inputalamatToko"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="35dp"
+                android:background="#0000"
+                android:hint="Alamat Toko"
+                android:inputType="textMultiLine"
+                android:padding="16dp"
+                android:textColor="#000"
+                android:textColorHint="#ADCCE2"
+                android:textSize="16dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="#ADCCE2" />
+
+            <Button
+                android:id="@+id/inputToko"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="28dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/angle"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Input Toko"
+                android:textColor="#fff"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</FrameLayout>

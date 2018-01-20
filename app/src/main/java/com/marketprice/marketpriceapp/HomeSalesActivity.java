@@ -34,7 +34,7 @@ public class HomeSalesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                Intent it = new Intent(HomeSalesActivity.this, DaftarBarangSalesActivity.class);
+                Intent it = new Intent(HomeSalesActivity.this, MenuActivity.class);
                 startActivity(it);
             }
         });
