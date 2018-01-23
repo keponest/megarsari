@@ -23,6 +23,9 @@ public class DetailBarang extends AppCompatActivity {
         harga = extras.getString("barangPrice");
         jumlah = extras.getString("barangValue");
 
-        showdetil.setText(id + " " + nama + " " + harga + " " + jumlah);
+        showdetil.setText("id barang: " + id +"\n" +
+                "nama barang: " +nama + "\n" +
+                "harga barang: " + harga + "\n" +
+                "jummlah barang: "+ jumlah);
     }
 }

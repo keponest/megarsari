@@ -70,12 +70,17 @@ public class SellBarangAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, "kiri "+selldaftarBarang.namabarang.getText(), Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(view.getContext(), DetailBarang.class);
+                final Context context = view.getContext();
+                Intent i = new Intent(context, DetailBarang.class);
+
                 i.putExtra("barangName", selldaftarBarang.namabarang.getText());
                 i.putExtra("barangId", "belumdisetidnya");
                 i.putExtra("barangPrice", selldaftarBarang.hargabarang.getText());
                 i.putExtra("barangValue", "belumdisetjugabro");
-                view.getContext().startActivity(i);
+
+
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(i);
             }
         });
 
@@ -83,12 +88,14 @@ public class SellBarangAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, "kanan " + selldaftarBarang.namabarangkanan.getText(), Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(view.getContext(), DetailBarang.class);
+                final Context context = view.getContext();
+                Intent i = new Intent(context, DetailBarang.class);
                 i.putExtra("barangName", selldaftarBarang.namabarangkanan.getText());
                 i.putExtra("barangId", "kananblmdiset");
                 i.putExtra("barangPrice", selldaftarBarang.hargabarangkanan.getText());
                 i.putExtra("barangValue", "belumdisetjugabro");
-                view.getContext().startActivity(i);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(i);
             }
         });
     }
