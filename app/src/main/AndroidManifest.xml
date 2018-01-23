@@ -11,15 +11,13 @@
         android:theme="@style/NoTitleBar">
         <activity
             android:name=".MenuActivity"
-            android:theme="@style/NoTitleBar"></activity>
+            android:theme="@style/NoTitleBar">
+
+        </activity>
         <activity
             android:name=".LoginActivity"
             android:theme="@style/NoTitleBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".SigninActivity"
@@ -40,7 +38,15 @@
         <activity android:name=".Admin.DaftarPenjualActivity" />
         <activity android:name=".Admin.DaftarBarangGudangActivity" />
         <activity android:name=".Admin.RegistrasiSalesActivity" />
-        <activity android:name=".domain.Penjual"></activity>
+        <activity
+            android:name=".ShowSearch"
+            android:theme="@style/NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

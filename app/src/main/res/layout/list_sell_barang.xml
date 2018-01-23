@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <!--<TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="2">
+        <TableRow>
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardleft"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:layout_gravity="left"
+                android:paddingBottom="50dp"
+                app:cardBackgroundColor="@color/colorPrimaryDark">
+
+                <ImageView
+                    android:id="@+id/iconBarangleft"
+                    android:layout_width="@dimen/avator_size"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="10dp"
+                    tools:src="@drawable/logo" />
+
+                <TextView
+                    android:id="@+id/namaBarangleft"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/list_avatar"
+                    android:textAppearance="?attr/textAppearanceListItem"
+                    android:textSize="@dimen/article_subheading"
+                    tools:text="Nama Barang" />
+
+                <TextView
+                    android:id="@+id/hargaBarangleft"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/list_title"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toRightOf="@+id/list_avatar"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textAppearance="?attr/textAppearanceListItem"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/list_body"
+                    tools:text="HargaBarang" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+
+                android:id="@+id/cardright"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="1dp"
+                android:paddingBottom="50dp"
+                app:cardBackgroundColor="@color/colorPrimaryDark">
+
+                <ImageView
+                    android:id="@+id/iconBarangright"
+                    android:layout_width="@dimen/avator_size"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="10dp"
+                    tools:src="@drawable/logo" />
+
+                <TextView
+                    android:id="@+id/namaBarangright"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/list_avatar"
+                    android:textAppearance="?attr/textAppearanceListItem"
+                    android:textSize="@dimen/article_subheading"
+                    tools:text="Nama Barang" />
+
+                <TextView
+                    android:id="@+id/hargaBarangright"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/list_title"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toRightOf="@+id/list_avatar"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textAppearance="?attr/textAppearanceListItem"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/list_body"
+                    tools:text="HargaBarang" />
+            </android.support.v7.widget.CardView>
+        </TableRow>
+    </TableLayout>-->
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardleft"
+        android:layout_width="match_parent"
+        android:layout_marginRight="2dp"
+        android:layout_weight="1"
+        android:layout_height="60dp"
+        android:layout_gravity="left"
+        android:paddingBottom="50dp"
+        app:cardBackgroundColor="@color/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/iconBarangleft"
+            android:layout_width="@dimen/avator_size"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            tools:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/namaBarangleft"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/list_avatar"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="@dimen/article_subheading"
+            tools:text="Nama Barang" />
+
+        <TextView
+            android:id="@+id/hargaBarangleft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/list_title"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/list_avatar"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/list_body"
+            tools:text="HargaBarang" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+
+        android:layout_marginLeft="2dp"
+        android:id="@+id/cardright"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="60dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="1dp"
+        android:paddingBottom="50dp"
+        app:cardBackgroundColor="@color/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/iconBarangright"
+            android:layout_width="@dimen/avator_size"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            tools:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/namaBarangright"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/list_avatar"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="@dimen/article_subheading"
+            tools:text="Nama Barang" />
+
+        <TextView
+            android:id="@+id/hargaBarangright"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/list_title"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/list_avatar"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/list_body"
+            tools:text="HargaBarang" />
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>
