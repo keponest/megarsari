@@ -24,12 +24,12 @@ public class SellBarangAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
     Context context;
     List<Barang> listBarangleft;
-    List<Barang> listBarangright;
+    //List<Barang> listBarangright;
     RecyclerView recyclerView;
 
     public SellBarangAdapter(List<Barang> listBarangleft, List<Barang> listBarangright,RecyclerView recyclerView, Context con) {
         this.listBarangleft = listBarangleft;
-        this.listBarangright = listBarangright;
+        //this.listBarangright = listBarangright;
         this.recyclerView = recyclerView;
         this.context = con;
         final LinearLayoutManager linearLayoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
@@ -37,7 +37,6 @@ public class SellBarangAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
-
             }
         });
     }
@@ -48,20 +47,20 @@ public class SellBarangAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
         View view = LayoutInflater.from(context).inflate(R.layout.list_sell_barang, parent, false);
         return new SellDaftarBarang(view);
-
     }
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
+
         Barang barang = listBarangleft.get(position);
-        Barang barang2 = listBarangright.get(position);
+        //Barang barang2 = listBarangright.get(position);
         final SellDaftarBarang selldaftarBarang = (SellDaftarBarang) holder;
 
 
         selldaftarBarang.namabarang.setText(barang.getBarangName());
         selldaftarBarang.hargabarang.setText(barang.getBarangPrice().toString());
         selldaftarBarang.gambarBarang.setImageDrawable(context.getResources().getDrawable(R.drawable.logo));
-
+        /*
         selldaftarBarang.namabarangkanan.setText("r "+ barang2.getBarangName());
         selldaftarBarang.hargabarangkanan.setText(barang2.getBarangPrice().toString());
         selldaftarBarang.gambarBarangkanan.setImageDrawable(context.getResources().getDrawable(R.drawable.logo));
@@ -97,7 +96,7 @@ public class SellBarangAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
                 i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(i);
             }
-        });
+        });*/
     }
 
     @Override
@@ -111,10 +110,11 @@ public class SellBarangAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         public ImageView gambarBarang;
         public CardView cardViewkiri;
 
+        /*
         public TextView namabarangkanan;
         public TextView hargabarangkanan;
         public ImageView gambarBarangkanan;
-        public CardView cardViewkanan;
+        public CardView cardViewkanan;*/
 
         public SellDaftarBarang(View itemView) {
             super(itemView);
@@ -122,11 +122,11 @@ public class SellBarangAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             hargabarang = (TextView) itemView.findViewById(R.id.hargaBarangleft);
             gambarBarang = (ImageView) itemView.findViewById(R.id.iconBarangleft);
             cardViewkiri = (CardView) itemView.findViewById(R.id.cardleft);
-
+            /*
             namabarangkanan = (TextView) itemView.findViewById(R.id.namaBarangright);
             hargabarangkanan = (TextView) itemView.findViewById(R.id.hargaBarangright);
             gambarBarangkanan = (ImageView) itemView.findViewById(R.id.iconBarangright);
-            cardViewkanan = (CardView) itemView.findViewById(R.id.cardright);
+            cardViewkanan = (CardView) itemView.findViewById(R.id.cardright);*/
         }
     }
 

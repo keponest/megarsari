@@ -2,6 +2,7 @@ package com.marketprice.marketpriceapp.Admin;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -25,7 +26,7 @@ public class DaftarPenjualActivity extends AppCompatActivity {
         recyclerViewPenjual = (RecyclerView) findViewById(R.id.RVPenjual);
         recyclerViewPenjual.setHasFixedSize(true);
 
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(),2);
         recyclerViewPenjual.setLayoutManager(layoutManager);
         addDummyPenjual();
 

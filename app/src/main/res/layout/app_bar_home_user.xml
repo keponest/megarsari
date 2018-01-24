@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.marketprice.marketpriceapp.HomeUserActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:theme="@style/CustomTheme">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="0dp">
+
+            <TableRow android:id="@+id/row1">
+
+                <com.mancj.materialsearchbar.MaterialSearchBar
+                    style="@style/MaterialSearchBarLight"
+                    app:mt_navIconEnabled="true"
+                    app:mt_hint="Cari barang"
+                    app:mt_maxSuggestionsCount="5"
+                    app:mt_roundedSearchBarEnabled="true"
+                    android:layout_width="320dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/searchBar"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <Button
+                    android:id="@+id/btnbelanja"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/logo" />
+            </TableRow>
+
+
+        </TableLayout>
+
+
+
+        <include layout="@layout/content_home_user" />
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

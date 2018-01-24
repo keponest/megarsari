@@ -11,14 +11,10 @@
         android:theme="@style/NoTitleBar">
         <activity
             android:name=".MenuActivity"
-            android:theme="@style/NoTitleBar">
-
-        </activity>
+            android:theme="@style/NoTitleBar"></activity>
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/NoTitleBar">
-
-        </activity>
+            android:theme="@style/NoTitleBar"></activity>
         <activity
             android:name=".SigninActivity"
             android:theme="@style/NoTitleBar" />
@@ -35,12 +31,16 @@
         <activity android:name=".ReportActivity" />
         <activity android:name=".Sales.InputBarangActivity" />
         <activity android:name=".Sales.DaftarBarangSalesActivity" />
-        <activity android:name=".Admin.DaftarPenjualActivity" />
+        <activity android:name=".Admin.DaftarPenjualActivity"></activity>
         <activity android:name=".Admin.DaftarBarangGudangActivity" />
         <activity android:name=".Admin.RegistrasiSalesActivity" />
         <activity
             android:name=".ShowSearch"
             android:theme="@style/NoTitleBar">
+
+        </activity>
+        <activity
+            android:name=".HomeUserActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

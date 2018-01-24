@@ -14,6 +14,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="CustomTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:height">@dimen/bar_height</item>
+        <item name="height">@dimen/bar_height</item>
+    </style>
+
     <style name="NoTitleBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="NoTitleBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

@@ -3,6 +3,7 @@ package com.marketprice.marketpriceapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -34,7 +35,7 @@ public class ShowSearch extends AppCompatActivity {
         recyclerViewSellBarang = (RecyclerView) findViewById(R.id.RVShowSellBarang);
         recyclerViewSellBarang.setHasFixedSize(true);
 
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(),2);
         recyclerViewSellBarang.setLayoutManager(layoutManager);
         addDummyBarang();
         //addoneDummy();
@@ -42,7 +43,7 @@ public class ShowSearch extends AppCompatActivity {
         sellBarangAdapter = new SellBarangAdapter(listBarangleft,listBarangright, recyclerViewSellBarang, getApplicationContext());
         recyclerViewSellBarang.setAdapter(sellBarangAdapter);
 
-        /*recyclerViewSellBarang.addOnItemTouchListener(new RecyclerItemClickListener(getApplicationContext(), new RecyclerItemClickListener.OnItemClickListener() {
+        recyclerViewSellBarang.addOnItemTouchListener(new RecyclerItemClickListener(getApplicationContext(), new RecyclerItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
                 Intent i = new Intent(getApplicationContext(), DetailBarang.class);
@@ -52,7 +53,7 @@ public class ShowSearch extends AppCompatActivity {
                 i.putExtra("barangValue", listBarangleft.get(position).getBarangValue().toString());
                 startActivity(i);
             }
-        }));*/
+        }));
     }
 
     private void addDummyBarang() {
