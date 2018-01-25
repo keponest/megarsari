@@ -12,6 +12,7 @@ import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+
 import com.mancj.materialsearchbar.MaterialSearchBar;
 
 
@@ -68,7 +69,7 @@ public class HomeUserActivity extends AppCompatActivity
 
     @Override
     public void onButtonClicked(int buttonCode) {
-        switch (buttonCode){
+        switch (buttonCode) {
             case MaterialSearchBar.BUTTON_NAVIGATION:
                 drawer.openDrawer(Gravity.LEFT);
                 break;

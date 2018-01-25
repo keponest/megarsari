@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.marketprice.marketpriceapp.Report.ReportSalesActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titleReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Laporan Bulanan"
+            android:textColor="@color/colorBlackFont" />
+
+        <TextView
+            android:id="@+id/textReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleReport"
+            android:layout_marginTop="10dp"
+            android:text="Penjualan Aqua"
+            android:textColor="@color/colorBlackFont" />
+
+        <TableLayout
+            android:id="@+id/tableReportAqua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textReport"
+            android:background="@color/colorBlackFont">
+
+            <TableRow
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/colorWhite">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nama Barang"
+                    android:textColor="@color/colorBlackFont" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Aqua Galon"
+                    android:textColor="@color/colorBlackFont" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/colorWhite">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Harga Barang Barang"
+                    android:textColor="@color/colorBlackFont" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="16000"
+                    android:textColor="@color/colorBlackFont" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/colorWhite">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Jumlah Terjual"
+                    android:textColor="@color/colorBlackFont" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="70"
+                    android:textColor="@color/colorBlackFont" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/colorWhite">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Total Pendapatan Aqua Galon"
+                    android:textColor="@color/colorBlackFont" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1.120.000"
+                    android:textColor="@color/colorBlackFont" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/texttotalpendapatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableReportAqua"
+            android:layout_marginTop="10dp"
+            android:text="Total Pendapatan: "
+            android:textColor="@color/colorBlackFont" />
+
+        <TextView
+            android:id="@+id/pendapatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/texttotalpendapatan"
+            android:text="Rp 1.120.000"
+            android:textColor="@color/colorBlackFont" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
