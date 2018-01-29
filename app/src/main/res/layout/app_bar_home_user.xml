@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.marketprice.marketpriceapp.HomeUserActivity">
+
+    tools:context="com.marketprice.marketpriceapp.User.HomeUserActivity">
 
     <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/CustomTheme">
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:theme="@style/CustomTheme">
 
-        <com.mancj.materialsearchbar.MaterialSearchBar
+      <com.mancj.materialsearchbar.MaterialSearchBar
             android:id="@+id/searchBar"
             style="@style/MaterialSearchBarLight"
             android:layout_width="match_parent"
@@ -22,15 +23,10 @@
             android:layout_marginBottom="2dp"
             app:mt_hint="Cari barang"
             app:mt_maxSuggestionsCount="5"
-            app:mt_navIconEnabled="true"
-            app:mt_roundedSearchBarEnabled="true" />
+            app:mt_navIconEnabled="true"/>
         <include layout="@layout/content_home_user" />
 
 
-
     </android.support.design.widget.AppBarLayout>
-
-
-
-
-</android.support.design.widget.CoordinatorLayout>
+    <include layout="@layout/content_home_user" />
+ </RelativeLayout>

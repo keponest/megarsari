@@ -1,12 +1,18 @@
-package com.marketprice.marketpriceapp;
+package com.marketprice.marketpriceapp.User;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Gravity;
@@ -14,13 +20,23 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.mancj.materialsearchbar.MaterialSearchBar;
+import com.marketprice.marketpriceapp.R;
+import com.marketprice.marketpriceapp.ShowSearch;
+
 
 
 public class HomeUserActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, MaterialSearchBar.OnSearchActionListener {
+        implements NavigationView.OnNavigationItemSelectedListener, MaterialSearchBar.OnSearchActionListener{
 
+    //Untuk drawer nav dan search bar --kefin
     private MaterialSearchBar searchBar;
     DrawerLayout drawer;
+    //Untuk tab fragments --kefin
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+
+    private FragmentManager fragmentManager;
+    private Fragment fragment = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +66,12 @@ public class HomeUserActivity extends AppCompatActivity
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        fragmentManager = getSupportFragmentManager();
+        final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragment = new UserFragment();
+        fragmentTransaction.replace(R.id.main_container_wrapper, fragment);
+        fragmentTransaction.commit();
     }
 
     @Override
@@ -111,22 +133,26 @@ public class HomeUserActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_home_user) {
 
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_kategori_barang) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_kategori_toko) {
 
         } else if (id == R.id.nav_manage) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_help) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_out) {
 
         }
-
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.main_container_wrapper, fragment);
+        transaction.commit();
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }

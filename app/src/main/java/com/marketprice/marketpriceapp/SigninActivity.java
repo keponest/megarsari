@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.marketprice.marketpriceapp.Admin.HomeAdminActivity;
+import com.marketprice.marketpriceapp.Sales.HomeSalesActivity;
 import com.marketprice.marketpriceapp.domain.Account;
 
 import java.util.ArrayList;

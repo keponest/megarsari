@@ -1,4 +1,4 @@
-package com.marketprice.marketpriceapp;
+package com.marketprice.marketpriceapp.Sales;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,8 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.marketprice.marketpriceapp.Sales.DaftarBarangSalesActivity;
-import com.marketprice.marketpriceapp.Sales.InputBarangActivity;
+import com.marketprice.marketpriceapp.MenuActivity;
+import com.marketprice.marketpriceapp.R;
+import com.marketprice.marketpriceapp.ReportActivity;
 
 public class HomeSalesActivity extends AppCompatActivity {
 

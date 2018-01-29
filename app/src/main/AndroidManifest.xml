@@ -22,10 +22,10 @@
             android:name=".SignupActivity"
             android:theme="@style/NoTitleBar" />
         <activity
-            android:name=".HomeAdminActivity"
+            android:name=".Admin.HomeAdminActivity"
             android:theme="@style/NoTitleBar" />
         <activity
-            android:name=".HomeSalesActivity"
+            android:name=".Sales.HomeSalesActivity"
             android:theme="@style/NoTitleBar" />
         <activity android:name=".DetailBarang" />
         <activity android:name=".ReportActivity" />
@@ -37,15 +37,15 @@
         <activity
             android:name=".ShowSearch"
             android:theme="@style/NoTitleBar"></activity>
-        <activity android:name=".HomeUserActivity">
-
-        </activity>
-        <activity android:name=".Report.ReportSalesActivity">
+        <activity android:name=".User.HomeUserActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Report.ReportSalesActivity">
+
         </activity>
     </application>
 
