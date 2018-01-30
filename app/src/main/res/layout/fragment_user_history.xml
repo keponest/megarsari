@@ -4,10 +4,32 @@
     android:layout_height="match_parent"
     tools:context="com.marketprice.marketpriceapp.User.UserHistoryFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- TODO: FILL LIST HISTORY PURCHASE fragment layout -->
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="History" />
+        android:background="@color/colorWhite"
+        android:padding="3dp">
+
+        <TextView
+            android:id="@+id/textHistorypurchase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Purchase History"
+            android:textColor="@color/colorBlackFont" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/RVHistpryPurchase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_below="@+id/textHistorypurchase"
+            android:layout_gravity="left|top"
+            android:layout_marginTop="50dp">
+
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
 
 </FrameLayout>

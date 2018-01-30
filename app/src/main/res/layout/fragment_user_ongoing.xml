@@ -5,9 +5,17 @@
     tools:context="com.marketprice.marketpriceapp.User.UserOngoingFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Transaksi Ongoing" />
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Transaksi Ongoing"
+            android:textColor="@color/colorBlackFont" />
+    </RelativeLayout>
+
 
 </FrameLayout>

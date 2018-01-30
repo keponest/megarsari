@@ -24,9 +24,8 @@ import com.marketprice.marketpriceapp.R;
 import com.marketprice.marketpriceapp.ShowSearch;
 
 
-
 public class HomeUserActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, MaterialSearchBar.OnSearchActionListener{
+        implements NavigationView.OnNavigationItemSelectedListener, MaterialSearchBar.OnSearchActionListener {
 
     //Untuk drawer nav dan search bar --kefin
     private MaterialSearchBar searchBar;

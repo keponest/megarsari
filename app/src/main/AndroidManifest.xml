@@ -36,7 +36,7 @@
         <activity android:name=".Admin.RegistrasiSalesActivity" />
         <activity
             android:name=".ShowSearch"
-            android:theme="@style/NoTitleBar"></activity>
+            android:theme="@style/NoTitleBar" />
         <activity android:name=".User.HomeUserActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,9 +44,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Report.ReportSalesActivity">
-
-        </activity>
+        <activity android:name=".Report.ReportSalesActivity"></activity>
+        <activity android:name=".History.HistoryDetailActivity"></activity>
     </application>
 
 </manifest>

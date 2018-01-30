@@ -1,14 +1,29 @@
 package com.marketprice.marketpriceapp.User;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.marketprice.marketpriceapp.Adapter.HistoryAdapter;
+import com.marketprice.marketpriceapp.History.HistoryDetailActivity;
 import com.marketprice.marketpriceapp.R;
+import com.marketprice.marketpriceapp.RecyclerItemClickListener;
+import com.marketprice.marketpriceapp.domain.History;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserHistoryFragment extends Fragment {
+
+    private HistoryAdapter historyAdapter;
+    private List<History> listhistory = new ArrayList<History>();
+    RecyclerView recyclerViewHistory;
 
     public UserHistoryFragment() {
     }
@@ -16,6 +31,45 @@ public class UserHistoryFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_user_history, container, false);
+        View view = inflater.inflate(R.layout.fragment_user_history, container, false);
+
+        recyclerViewHistory = (RecyclerView) view.findViewById(R.id.RVHistpryPurchase);
+        recyclerViewHistory.setHasFixedSize(true);
+
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+        recyclerViewHistory.setLayoutManager(layoutManager);
+        addDummyHistory();
+
+        historyAdapter = new HistoryAdapter(getContext(), listhistory, recyclerViewHistory);
+        recyclerViewHistory.setAdapter(historyAdapter);
+        recyclerViewHistory.addOnItemTouchListener(new RecyclerItemClickListener(getContext(), new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Intent i = new Intent(getActivity().getApplicationContext(), HistoryDetailActivity.class);
+                i.putExtra("historyName", listhistory.get(position).getHargaBarang());
+                i.putExtra("historyId", listhistory.get(position).getIdHistory().toString());
+                i.putExtra("historyPrice", listhistory.get(position).getHargaBarang().toString());
+                i.putExtra("historyDesc", listhistory.get(position).getAdditionalMessage().toString());
+                startActivity(i);
+            }
+        }));
+
+        return view;
+
+
+    }
+
+    private void addDummyHistory() {
+        int j = 1;
+        for (int i = 0; i < 20; i++) {
+            History data = new History();
+            data.setIdHistory(Long.valueOf(j));
+            data.setNamaBarang("Barang " + j);
+            data.setHargaBarang(j * 1000);
+            data.setAdditionalMessage("this is history number ");
+            listhistory.add(data);
+            Log.v("List History", "Ini Masuk data ke " + i);
+            j++;
+        }
     }
 }
