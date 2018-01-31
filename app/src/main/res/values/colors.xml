@@ -8,5 +8,6 @@
 
     <color name="colorBlackFont">#000000</color>
     <color name="colorWhite">#ffffff</color>
+    <color name="colorGrey">#838181</color>
 
 </resources>

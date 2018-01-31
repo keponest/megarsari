@@ -11,7 +11,9 @@
         android:theme="@style/NoTitleBar">
         <activity
             android:name=".MenuActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar">
+
+        </activity>
         <activity
             android:name=".LoginActivity"
             android:theme="@style/NoTitleBar" />
