@@ -1,4 +1,4 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,21 +15,22 @@
             android:id="@+id/textHistorypurchase"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:text="Purchase History"
             android:textColor="@color/colorBlackFont" />
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/RVHistpryPurchase"
+            android:id="@+id/RVHistoryPurchase"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_below="@+id/textHistorypurchase"
             android:layout_gravity="left|top"
-            android:layout_marginTop="50dp">
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/textHistorypurchase">
 
         </android.support.v7.widget.RecyclerView>
     </RelativeLayout>
 
 
-</FrameLayout>
+</android.support.constraint.ConstraintLayout>

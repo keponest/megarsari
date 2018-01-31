@@ -25,11 +25,10 @@ public class HistoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     List<History> listHistory;
     RecyclerView recyclerView;
 
-    public HistoryAdapter(Context context, List<History> listHistory, RecyclerView recyclerView) {
-        this.context = context;
-        this.listHistory = listHistory;
+    public HistoryAdapter(List<History> listHistory, RecyclerView recyclerView, Context con) {
+        this.listHistory= listHistory;
         this.recyclerView = recyclerView;
-
+        this.context = con;
         final LinearLayoutManager linearLayoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
@@ -40,42 +39,44 @@ public class HistoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         });
     }
 
+
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
         View view = LayoutInflater.from(context).inflate(R.layout.list_history, parent, false);
         return new DaftarHistory(view);
+
     }
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        History history = listHistory.get(position);
+        History history= listHistory.get(position);
         DaftarHistory daftarHistory = (DaftarHistory) holder;
 
-        /*daftarHistory.namaHistoryPurchase.setText(history.getNamaBarang());
-        daftarHistory.hargaHistoryPurchase.setText(history.getHargaBarang().toString());
-        daftarHistory.iconHistoryPurchase.setImageDrawable(context.getResources().getDrawable(R.drawable.logo));*/
 
-        daftarHistory.namaHistoryPurchase.setText("TEST NAMA");
-        daftarHistory.hargaHistoryPurchase.setText("TEST HARGA");
-        daftarHistory.iconHistoryPurchase.setImageDrawable(context.getResources().getDrawable(R.drawable.logo));
+        daftarHistory.namabarangPurchase.setText(history.getNamaBarangPurchase());
+        daftarHistory.hargabarangPurchase.setText(history.getHargaBarangPurchase().toString());
+        daftarHistory.gambarBarangPurchase.setImageDrawable(context.getResources().getDrawable(R.drawable.logo));
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return listHistory == null ? 0 : listHistory.size();
     }
 
     static class DaftarHistory extends RecyclerView.ViewHolder {
-        public TextView namaHistoryPurchase;
-        public TextView hargaHistoryPurchase;
-        public ImageView iconHistoryPurchase;
+        public TextView namabarangPurchase;
+        public TextView hargabarangPurchase;
+        public ImageView gambarBarangPurchase;
 
         public DaftarHistory(View itemView) {
             super(itemView);
-            namaHistoryPurchase= (TextView) itemView.findViewById(R.id.namaHistoryPurchase);
-            hargaHistoryPurchase = (TextView) itemView.findViewById(R.id.hargaHistoryPurchase);
-            iconHistoryPurchase = (ImageView) itemView.findViewById(R.id.iconHistoryPurchase);
+            namabarangPurchase = (TextView) itemView.findViewById(R.id.namaHistoryPurchase);
+            hargabarangPurchase = (TextView) itemView.findViewById(R.id.hargaHistoryPurchase);
+            gambarBarangPurchase = (ImageView) itemView.findViewById(R.id.iconHistoryPurchase);
 
         }
     }
+
+
 }

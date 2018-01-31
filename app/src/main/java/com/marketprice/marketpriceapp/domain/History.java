@@ -8,9 +8,9 @@ import java.time.LocalDate;
 
 public class History {
     Long idHistory;
-    String namaBarang;
-    Number hargaBarang;
-    String additionalMessage;
+    String namaBarangPurchase;
+    Number hargaBarangPurchase;
+    String additionalMessagePurchase;
     LocalDate purchaceDate;
 
     public Long getIdHistory() {
@@ -21,28 +21,28 @@ public class History {
         this.idHistory = idHistory;
     }
 
-    public String getNamaBarang() {
-        return namaBarang;
+    public String getNamaBarangPurchase() {
+        return namaBarangPurchase;
     }
 
-    public void setNamaBarang(String namaBarang) {
-        this.namaBarang = namaBarang;
+    public void setNamaBarangPurchase(String namaBarangPurchase) {
+        this.namaBarangPurchase = namaBarangPurchase;
     }
 
-    public Number getHargaBarang() {
-        return hargaBarang;
+    public Number getHargaBarangPurchase() {
+        return hargaBarangPurchase;
     }
 
-    public void setHargaBarang(Number hargaBarang) {
-        this.hargaBarang = hargaBarang;
+    public void setHargaBarangPurchase(Number hargaBarangPurchase) {
+        this.hargaBarangPurchase = hargaBarangPurchase;
     }
 
-    public String getAdditionalMessage() {
-        return additionalMessage;
+    public String getAdditionalMessagePurchase() {
+        return additionalMessagePurchase;
     }
 
-    public void setAdditionalMessage(String additionalMessage) {
-        this.additionalMessage = additionalMessage;
+    public void setAdditionalMessagePurchase(String additionalMessagePurchase) {
+        this.additionalMessagePurchase = additionalMessagePurchase;
     }
 
     public LocalDate getPurchaceDate() {
@@ -57,9 +57,9 @@ public class History {
     public String toString() {
         return "History{" +
                 "idHistory=" + idHistory +
-                ", namaBarang='" + namaBarang + '\'' +
-                ", hargaBarang=" + hargaBarang +
-                ", additionalMessage='" + additionalMessage + '\'' +
+                ", namaBarangPurchase='" + namaBarangPurchase + '\'' +
+                ", hargaBarangPurchase=" + hargaBarangPurchase +
+                ", additionalMessagePurchase='" + additionalMessagePurchase + '\'' +
                 ", purchaceDate=" + purchaceDate +
                 '}';
     }
