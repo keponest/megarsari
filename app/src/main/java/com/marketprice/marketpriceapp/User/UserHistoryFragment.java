@@ -29,7 +29,11 @@ public class UserHistoryFragment extends Fragment {
 
     private BarangAdapter barangAdapter;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private List<Barang> listBarang = new ArrayList<Barang>();
+=======
+    private List<Barang> listbarang = new ArrayList<Barang>();
+>>>>>>> c3c3ac9bd2aeabc0f6b4cc43069aaf2eb865cbb3
 =======
     private List<Barang> listbarang = new ArrayList<Barang>();
 >>>>>>> c3c3ac9bd2aeabc0f6b4cc43069aaf2eb865cbb3
@@ -42,11 +46,17 @@ public class UserHistoryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 //        View view = inflater.inflate(R.layout.fragment_user_history, container, false);
         View view = inflater.inflate(R.layout.activity_menu, container, false);
 
         /*recyclerViewHistory = (RecyclerView) view.findViewById(R.id.RVBarang);
+=======
+        /*View view = inflater.inflate(R.layout.fragment_user_history, container, false);
+
+        recyclerViewHistory = (RecyclerView) view.findViewById(R.id.RVHistoryPurchase);
+>>>>>>> c3c3ac9bd2aeabc0f6b4cc43069aaf2eb865cbb3
 =======
         /*View view = inflater.inflate(R.layout.fragment_user_history, container, false);
 
@@ -58,6 +68,7 @@ public class UserHistoryFragment extends Fragment {
         recyclerViewHistory.setLayoutManager(layoutManager);
         addDummyHistory();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         historyAdapter = new HistoryAdapter(getContext(), listhistory, recyclerViewHistory);
         recyclerViewHistory.setAdapter(historyAdapter);*/
@@ -74,6 +85,8 @@ public class UserHistoryFragment extends Fragment {
 
         /*recyclerViewHistory.addOnItemTouchListener(new RecyclerItemClickListener(getContext(), new RecyclerItemClickListener.OnItemClickListener() {
 =======
+=======
+>>>>>>> c3c3ac9bd2aeabc0f6b4cc43069aaf2eb865cbb3
         historyAdapter = new HistoryAdapter(listhistory, recyclerViewHistory, view.getContext());
         recyclerViewHistory.setAdapter(historyAdapter);
         recyclerViewHistory.addOnItemTouchListener(new RecyclerItemClickListener(getContext(), new RecyclerItemClickListener.OnItemClickListener() {
@@ -89,7 +102,10 @@ public class UserHistoryFragment extends Fragment {
             }
         }));*/
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c3c3ac9bd2aeabc0f6b4cc43069aaf2eb865cbb3
 
         View view = inflater.inflate(R.layout.fragment_user_history, container, false);
 
@@ -103,6 +119,9 @@ public class UserHistoryFragment extends Fragment {
         historyAdapter = new HistoryAdapter(listhistory, recyclerViewHistory, getContext());
         recyclerViewHistory.setAdapter(historyAdapter);
 
+<<<<<<< HEAD
+>>>>>>> c3c3ac9bd2aeabc0f6b4cc43069aaf2eb865cbb3
+=======
 >>>>>>> c3c3ac9bd2aeabc0f6b4cc43069aaf2eb865cbb3
 
         return view;
@@ -134,7 +153,11 @@ public class UserHistoryFragment extends Fragment {
             data.setBarangPrice(j * 1000);
             data.setBarangValue(j * 10);
 <<<<<<< HEAD
+<<<<<<< HEAD
             listBarang.add(data);
+=======
+            listbarang.add(data);
+>>>>>>> c3c3ac9bd2aeabc0f6b4cc43069aaf2eb865cbb3
 =======
             listbarang.add(data);
 >>>>>>> c3c3ac9bd2aeabc0f6b4cc43069aaf2eb865cbb3
