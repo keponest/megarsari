@@ -26,7 +26,6 @@ public class UserHistoryFragment extends Fragment {
     private HistoryAdapter historyAdapter;
     private List<History> listhistory = new ArrayList<History>();
     RecyclerView recyclerViewHistory;
-    RecyclerView recyclerViewBarang;
 
     public UserHistoryFragment() {
     }

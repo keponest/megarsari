@@ -1,6 +1,8 @@
 package com.marketprice.marketpriceapp.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.marketprice.marketpriceapp.History.HistoryDetailActivity;
 import com.marketprice.marketpriceapp.R;
 import com.marketprice.marketpriceapp.domain.History;
 
@@ -51,12 +54,30 @@ public class HistoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         History history= listHistory.get(position);
-        DaftarHistory daftarHistory = (DaftarHistory) holder;
+        final DaftarHistory daftarHistory = (DaftarHistory) holder;
 
 
         daftarHistory.namabarangPurchase.setText(history.getNamaBarangPurchase());
         daftarHistory.hargabarangPurchase.setText(history.getHargaBarangPurchase().toString());
         daftarHistory.gambarBarangPurchase.setImageDrawable(context.getResources().getDrawable(R.drawable.logo));
+
+        daftarHistory.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String namabarangPurchase = daftarHistory.namabarangPurchase.getText().toString();
+                String hargabarangPurchase = daftarHistory.hargabarangPurchase.getText().toString();
+                ImageView gambarBarangPurchase = daftarHistory.gambarBarangPurchase;
+                Context context = view.getContext();
+                Intent i = new Intent(context, HistoryDetailActivity.class);
+
+                i.putExtra("namabarangPurchase", namabarangPurchase);
+                i.putExtra("hargabarangPurchase", hargabarangPurchase);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(i);
+            }
+        });
+
+
     }
 
     @Override
@@ -65,6 +86,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     static class DaftarHistory extends RecyclerView.ViewHolder {
+        public CardView cardView;
         public TextView namabarangPurchase;
         public TextView hargabarangPurchase;
         public ImageView gambarBarangPurchase;
@@ -74,6 +96,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             namabarangPurchase = (TextView) itemView.findViewById(R.id.namaHistoryPurchase);
             hargabarangPurchase = (TextView) itemView.findViewById(R.id.hargaHistoryPurchase);
             gambarBarangPurchase = (ImageView) itemView.findViewById(R.id.iconHistoryPurchase);
+            cardView = (CardView) itemView.findViewById(R.id.cardViewHistory);
 
         }
     }
